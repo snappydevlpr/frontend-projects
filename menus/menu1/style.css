@@ -1,0 +1,88 @@
+html,body{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    padding: 0 10px;
+    width: auto;
+}
+
+.button-group{
+    display: flex;
+    align-items: center;
+    width: 150px;
+}
+
+.menu-button{
+    background-color: black;
+    border: none;
+    height: 100%;
+    color: white;
+}
+
+.dropdown-section{
+    display: none;
+    position: absolute;
+    width: 75px;
+}
+
+.dropdown-option{
+    display: block;
+    width: 100%;
+
+}
+.menu-button:hover{
+    background-color: white;
+    color: black;
+}
+
+.menu-button:hover + .dropdown-section{
+    display: block;
+    background-color: white;
+    color: yellowgreen;
+}
+
+.mobile-menu{
+    display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+   
+}
+.mobile-menu-expanded{
+    display: none;
+}
+@media only screen and (max-width: 768px) {
+    .button-group{
+        display: none;
+    }
+
+    .mobile-menu{
+        display: flex;
+    }
+    .mobile-menu-button{
+        background: none;
+        border: none;
+    }
+
+    .mobile-menu-button-img{
+        height: 40px;
+        width: 40px;
+    }  
+
+    .mobile-menu-expanded{
+        position: absolute;
+        z-index: 200;
+        height: 100%;
+        width: 100%;
+        background: white;
+    }
+
+}
+
